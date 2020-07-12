@@ -1,4 +1,11 @@
 # Docker
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial (e3a623e7-dd00-40e0-ae4e-524a212b6f50)'
+    appType: 'webAppLinux'
+    WebAppName: 'vsts'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
